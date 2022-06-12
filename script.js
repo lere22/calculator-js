@@ -46,15 +46,8 @@ const inputOperator = (operator) => {
   if (calcOperator === "") {
     prevNumber = currentNumber;
   }
-  // cek untuk multiple operation
-  if (currentNumber === "") return;
-  if (prevNumber !== "") {
-    calculate();
-    updateScreen(currentNumber);
-  }
   calcOperator = operator;
-  prevNumber = currentNumber;
-  currentNumber = "";
+  currentNumber = "0";
 };
 
 // Click event untuk proses kalkulasi
@@ -90,7 +83,6 @@ const calculate = () => {
   }
   currentNumber = result;
   calcOperator = "";
-  prevNumber = "";
 };
 
 // Click event untuk all-clear
